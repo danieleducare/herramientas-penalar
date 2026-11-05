@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Herramientas Peñalar</title>
+<style>
+  :root {
+    --bg: #EEF1F4;
+    --panel: #FFFFFF;
+    --fg: #1C2530;
+    --fg-muted: #5B6672;
+    --line: #D7DEE4;
+    --accent: #2F5D8A;
+    --accent-soft: #E3ECF4;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #11161C;
+      --panel: #1A212A;
+      --fg: #E7ECF1;
+      --fg-muted: #93A1AF;
+      --line: #2A333D;
+      --accent: #7BA7D1;
+      --accent-soft: #223241;
+      color-scheme: dark;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: 40px 56px;
+  }
+  .wrap { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+  h1 { font-family: "Fraunces", Georgia, serif; font-size: 30px; font-weight: 600; margin: 0; }
+  .eyebrow {
+    font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--accent); font-weight: 600;
+  }
+  .subtitle { color: var(--fg-muted); font-size: 14.5px; margin: 0; max-width: 56ch; }
+  .tools { display: flex; flex-direction: column; gap: 12px; }
+  a.tool {
+    display: flex; flex-direction: column; gap: 4px;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+    padding: 18px 20px; text-decoration: none; color: inherit;
+  }
+  a.tool:hover { border-color: var(--accent); }
+  a.tool .name { font-weight: 600; font-size: 16px; }
+  a.tool .desc { font-size: 13.5px; color: var(--fg-muted); }
+  .soon {
+    display: flex; flex-direction: column; gap: 4px;
+    border: 1px dashed var(--line); border-radius: 14px;
+    padding: 18px 20px; color: var(--fg-muted);
+  }
+  .soon .name { font-weight: 600; font-size: 16px; }
+  .soon .desc { font-size: 13.5px; }
+  footer { font-size: 12px; color: var(--fg-muted); padding-top: 8px; }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Work+Sans:wght@400;500;600&display=swap">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Colegio Peñalar</div>
+    <h1>Herramientas internas</h1>
+    <p class="subtitle">Panel con los accesos a las herramientas del centro. Se abren sin necesidad de cuenta ni inicio de sesión.</p>
+  </header>
+
+  <div class="tools">
+    <a class="tool" href="admisiones/">
+      <span class="name">Admisiones</span>
+      <span class="desc">Qué atender hoy: llamadas pendientes, entrevistas próximas y seguimientos, con los datos del CRM.</span>
+    </a>
+    <div class="soon">
+      <span class="name">Sanciones</span>
+      <span class="desc">Próximamente.</span>
+    </div>
+    <div class="soon">
+      <span class="name">Excursiones</span>
+      <span class="desc">Próximamente.</span>
+    </div>
+  </div>
+
+  <footer>Colegio Peñalar · uso interno</footer>
+</div>
+</body>
+</html>
